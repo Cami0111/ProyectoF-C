@@ -62,7 +62,7 @@ Antes de empezar, asegurate de tener:
 ### 1️⃣ Clonar el repositorio
 Abre la terminal(Git Bash,PowerShell o inclusive en Clion ) y escribe en una carpeta donde quieras tener este proyecto:
 ```bash
-git clone https://github.com/tu-usuario/valle-iridiano.git
+git clone https://github.com/tu-usuario/ProyectoF-C.git
 ---
 ```
 ## 2️⃣ Abrir el proyecto en Clion
