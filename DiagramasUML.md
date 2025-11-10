@@ -4,14 +4,14 @@ classDiagram
     -string nombre, archivo
     -char mapa[6][6]
     -int mapaBiomas[6][6]
-    -vector <Criatura*> criaturas
+    -vector ~Criatura*~ criaturas
     +Mundo(string n, string ar)
     +~Mundo()
     +char getSimbolo(int b) const
     +void agregarCriatura(Criatura *c)
     +void interacciones()
-    +void actualizarMapa(bool f,int ciclos)
-    +void mostrar(int ciclo)
+    +void actualizarMapa(int ciclos)
+    +void mostrar(int ciclos)
     +void cargar()
   }
   class Criatura{
