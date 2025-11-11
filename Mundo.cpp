@@ -168,7 +168,7 @@ void Mundo::mostrar(int ciclo) {
         cicloJson["criaturas"] = json::array();
         for (auto &c: criaturas) {
             json jc;
-            jc["simbolo"] = static_cast<int>(c->getSimbolo());
+            jc["simbolo"] = string(1, c->getSimbolo());
             jc["vida"] = c->getVida();
             jc["x"] = c->getX();
             jc["y"] = c->getY();
@@ -238,18 +238,18 @@ void Mundo::cargar() {
     }
     this->criaturas.clear();
     for (auto &cri: cicloJ["criaturas"]) {
-        char tipo = static_cast<char>(cri["simbolo"].get<int>());
+        char simbolo = cri["simbolo"].get<string>()[0];
         int vida = cri["vida"];
         int x = cri["x"];
         int y = cri["y"];
-        switch (tipo) {
-            case 'A': this->agregarCriatura(new Albo(tipo, vida, x, y));
+        switch (simbolo) {
+            case 'A': this->agregarCriatura(new Albo(simbolo, vida, x, y));
                 break;
-            case 'C': this->agregarCriatura(new Centella(tipo, vida, x, y));
+            case 'C': this->agregarCriatura(new Centella(simbolo, vida, x, y));
                 break;
-            case 'R': this->agregarCriatura(new Raiz(tipo, vida, x, y));
+            case 'R': this->agregarCriatura(new Raiz(simbolo, vida, x, y));
                 break;
-            case 'M': this->agregarCriatura(new Metamorfita(tipo, vida, x, y));
+            case 'M': this->agregarCriatura(new Metamorfita(simbolo, vida, x, y));
                 break;
         }
     }

@@ -66,8 +66,8 @@ void Centella::movimiento(int ciclos, char (&mapa)[6][6]) {
             int idx = rand() % k;
             ny = libres[idx][0];
             nx = libres[idx][1];
-
         }
+        cout << simbolo << " volo hasta: ( " << ny<< " , "<< nx <<" ) "<<endl;
 
     }
 }

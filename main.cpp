@@ -21,10 +21,10 @@ int main() {
         cout << "Ingrese la cantidad de ciclos : " ;
         cin >> ciclos;
     }while (ciclos < 0 );
+    valle.agregarCriatura(new Raiz('R',15,rand()%6,rand()%6));
     valle.agregarCriatura(new Centella('C',12,rand()%6,rand()%6));
     valle.agregarCriatura(new Albo('A',30,rand()%6,rand()%6));
     valle.agregarCriatura(new Metamorfita('M',20,rand()%6,rand()%6));
-    valle.agregarCriatura(new Raiz('R',15,rand()%6,rand()%6));
     valle.mostrar(ciclos);
     do {
         cout << "Cargar simulaciones anteriores?(s/n) ";
