@@ -1,9 +1,9 @@
 
 #include "Metamorfita.h"
 
-Metamorfita::Metamorfita(char s, int v, int x, int y):Criatura(s,v,x,y) {}
-
-char Metamorfita::getSimbolo() const {return simbolo;}
+Metamorfita::Metamorfita(char s,int v, int x, int y):Criatura(s ,v,x,y) {
+    simbolo = 'M';
+}
 
 void Metamorfita::movimiento(int ciclos, char (&mapa)[6][6]) {
 
@@ -28,6 +28,7 @@ void Metamorfita::movimiento(int ciclos, char (&mapa)[6][6]) {
             case 2: ty--; break;
             case 3: ty++; break;
         }
+
 
         if (Criatura::dentroDelimites(ty, tx) && mapa[ty][tx] == '_') {
 

@@ -9,6 +9,7 @@ bool Criatura::dentroDelimites(int y, int x) {
 }
 
 char Criatura::getSimbolo() const {
+    return simbolo;
 }
 
 void Criatura::aumentarVida(int v) { vida += v; }

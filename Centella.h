@@ -6,7 +6,6 @@
 #define PROY_CENTELLAS_H
 #include "Criatura.h"
 #include <cstdlib>
-#include <ctime>
 #include "json.hpp"
 #include <iostream>
 using namespace std;
@@ -15,8 +14,7 @@ using json = nlohmann::json;
 class Centella : public virtual Criatura {
 public:
  Centella() = default;
- Centella(char s,int v , int x, int y);
- char getSimbolo() const override;
+ Centella(char s, int v , int x, int y);
  void movimiento(int ciclos, char (&mapa)[6][6]) override ;
 
 };

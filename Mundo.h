@@ -22,6 +22,7 @@ const int BIOMA_LUMINOS0 = 2;
 const int BIOMA_ROCOSO = 3;
 const int BIOMA_VENENOSO = 4;
 const int BIOMA_LLANO = 0;
+
 class Mundo {
 private:
     string nombre, archivo;

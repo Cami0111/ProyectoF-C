@@ -18,8 +18,7 @@ public:
     virtual ~Criatura();
     virtual void movimiento(int ciclos, char(&mapa)[6][6]);
     virtual bool dentroDelimites(int y,int x);
-
-    virtual char getSimbolo() const;
+    char getSimbolo() const;
     int getVida(){return vida;}
     void aumentarVida(int v);
 

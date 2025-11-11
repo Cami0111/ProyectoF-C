@@ -26,7 +26,7 @@ classDiagram
     +virtual ~Criatura()
     +virtual void movimiento(int ciclos,char(&mapa)[6][6]) const = 0 
     +virtual bool dentroDeLimites(int y, int x)
-    +virtual char getSimbolo() const = 0
+    +char getSimbolo()
     +int getVida()
     +void aumentarVida(int v)
     +void recibirDaño(int v)
@@ -42,25 +42,21 @@ classDiagram
     }
   class Raiz{
     +Raiz(char s,int v,int x,int y)
-    +char getSimbolo()const override;
     +void movimiento(int ciclos,  char (&mapa)[6][6]) override;
     }
   class Centella{
     +Centella();
     +Centella(char s,int v , int x, int y);
-    +char getSimbolo() const override;
     +void movimiento(int ciclos, char (&mapa)[6][6]) override 
-    +void mover(vector ~char~ &valle , int pos) override
+    +void mover(char (&mapa)[6][6] , int pos) override
   }
   class Albo{
     +Albo(char s,int v , int x,int y)
-    +char getSimbolo() const override
     +void movimiento(int ciclos, char (&mapa)[6][6]) override
   }
   class Metamorfita{
     +Metamorfita()
     +Metamorfita(char s, int v , int x, int y)
-    +char getSimbolo()const override
     +void movimiento(int ciclos, char (&mapa)[6][6]) override
   }
 Mundo o-- Criatura

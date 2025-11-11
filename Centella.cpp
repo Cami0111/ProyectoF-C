@@ -1,10 +1,9 @@
 #include "Centella.h"
 
-Centella::Centella(char s, int v, int x, int y): Criatura(s, v, x, y){
+Centella::Centella(char s , int v, int x, int y): Criatura(s, v, x, y){
+simbolo = s;
 }
 
-char Centella::getSimbolo() const {
-    return simbolo;}
 void Centella::movimiento(int ciclos, char (&mapa)[6][6]) {
     int accion = rand() % 2 + 1;
     nx = x;
@@ -67,7 +66,8 @@ void Centella::movimiento(int ciclos, char (&mapa)[6][6]) {
             ny = libres[idx][0];
             nx = libres[idx][1];
         }
-        cout << simbolo << " volo hasta: ( " << ny<< " , "<< nx <<" ) "<<endl;
+        cout <<  simbolo <<" ha Volo hacia: " << ny << " , " << nx << endl;
+
 
     }
 }
