@@ -10,6 +10,8 @@ Allí se mueven, viven y mueren, dando forma a un ciclo constante de cambio y eq
 
 El proyecto es una **simulación de los ciclos de este mundo**, desarrollada en **C++**, aplicando diversos conceptos de **Programación Orientada a Objetos** como herencia, polimorfismo y abstracción.
 
+- Problema que resuelve: Construir la interacción apartir de dos clases, una con varios subclase y representarlo visulamente en la consola como el  **valle**.
+
 ---
 ## 🏞️ Modelo y Habitantes del Valle Iridiano
 El **Valle Iridiano** esta compuesto por un mundo que cobra vida gracias a la interacción entre sus nodos(biomas) y las criaturas que lo habitan.  
